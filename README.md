@@ -113,7 +113,9 @@ Complexity: O(n log n), where n is the number of songs.
 - [Linked-list](https://github.com/shashidhar275/shashidhar275.github.io/blob/main/codes/Linked-list)
 
 ### 3. Search Functionality
-
+<p align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7qrwMH4lbQP20rRFSQ9N5A.gif" width="500" alt="system design">
+</p>
 VSpotify employs the A* (A-star) algorithm for optimizing search functionalities within its platform. A* is a popular graph traversal and pathfinding algorithm that efficiently finds the shortest path between nodes, taking into account both the cost to reach each node and an estimated heuristic function that guides the search towards the goal. In Spotify's context, the A* algorithm enhances search efficiency by prioritizing nodes with lower overall cost, thereby improving the retrieval of songs, artists, and playlists based on user queries.
 
 Algorithm: A* (A-star) and Inverted Index
