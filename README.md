@@ -82,6 +82,10 @@ Recalculation: With 200M songs:
 
 ### 1. Music Recommendation System
 
+<p align="center">
+  <img src="https://djinit-ai.github.io/images/ss22.png" width="500" alt="system design">
+</p>
+
 Spotify's recommendation system is one of its standout features, leveraging sophisticated algorithms to analyze user preferences and listening behavior to suggest relevant songs, artists, and playlists. This system employs collaborative filtering, which examines the listening habits of users with similar tastes, and matrix factorization, which decomposes the user-item interaction matrix into latent factors. By combining these approaches, Spotify can provide personalized recommendations that align with individual user preferences, enhancing the overall listening experience. The efficiency of this recommendation system is crucial, as it handles a massive volume of data and must deliver real-time suggestions to users.
 Functionality: The recommendation system employs collaborative filtering and matrix factorization to personalize user recommendations based on historical listening data.
 
@@ -110,18 +114,16 @@ Complexity: O(n log n), where n is the number of songs.
 
 ### 3. Search Functionality
 
-Spotify's search functionality enables users to quickly find songs, albums, artists, and playlists within the platform. This feature uses an inverted index data structure for efficient full-text search capabilities, allowing for rapid indexing and querying of large datasets. By implementing the inverted index, Spotify can deliver relevant search results based on keywords, ensuring users can easily discover new music and revisit their favorites. The underlying algorithm for the search functionality ensures that both indexing and querying processes are optimized for performance, providing a seamless and responsive user experience.
-Functionality: Search functionality utilizes an inverted index for full-text search, supporting efficient indexing and querying.
+VSpotify employs the A* (A-star) algorithm for optimizing search functionalities within its platform. A* is a popular graph traversal and pathfinding algorithm that efficiently finds the shortest path between nodes, taking into account both the cost to reach each node and an estimated heuristic function that guides the search towards the goal. In Spotify's context, the A* algorithm enhances search efficiency by prioritizing nodes with lower overall cost, thereby improving the retrieval of songs, artists, and playlists based on user queries.
 
-Data Structure: Inverted Index
+Algorithm: A* (A-star) and Inverted Index
 
-Algorithm: Inverted Index
-
-Complexity:
+Complexity: Depends on the heuristic function and graph structure, typically O((V + E) log V) where V is the number of vertices (nodes) and E is the number of edges (connections).
 - Indexing: O(n log n), where n is the number of documents.
 - Querying: O(k + log n), where k is the number of query terms.
 
 [Inverted Index](https://www.geeksforgeeks.org/inverted-index/)
+[A-star](https://www.geeksforgeeks.org/a-search-algorithm/)
 
 ### 4. Streaming and Playback
 
